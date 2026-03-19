@@ -272,7 +272,7 @@
 
                 <destination>${project.build.directory}/installer</destination>
 
-                <type>EXE</type>
+                <type>MSI</type>
                 <winMenu>true</winMenu>
                 <winShortcut>true</winShortcut>
                 <winConsole>false</winConsole>
