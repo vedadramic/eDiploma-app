@@ -265,7 +265,7 @@ public class CycleCompletionController {
         Student student = thesisDetails.getStudent();
 
         String studentGenitiveForm = studentGenitiveField.getText().trim();
-        String academicTitle = getAcademicTitleByDepartment(thesisDetails.getDepartment().getName());
+        String academicTitle = getAcademicTitleByStudyProgram(student.getStudyProgram());
 
         // Build document number
         String userInput = documentNumberField.getText().trim();
@@ -424,16 +424,19 @@ public class CycleCompletionController {
         );
     }
 
-    private String getAcademicTitleByDepartment(String departmentName){
-        if(departmentName == null || departmentName.isBlank()) return "";
-        String normalized = departmentName.trim().toLowerCase();
-        if(normalized.contains("softversko")){
+    private String getAcademicTitleByStudyProgram(String studyProgram) {
+        if (studyProgram == null || studyProgram.isBlank()) return "";
+
+        String normalized = studyProgram.trim().toLowerCase();
+
+        if (normalized.contains("softversko")) {
             return "SOFTVER INŽENJER";
-        }else if(normalized.contains("građevinarstvo")){
+        } else if (normalized.contains("građevinarstvo")) {
             return "DIPLOMIRANI INŽENJER GRAĐEVINARSTVA";
-        }else if(normalized.contains("proizvodni")){
+        } else if (normalized.contains("proizvodni")) {
             return "PROIZVODNI INŽENJER";
         }
+
         return "";
     }
 }
