@@ -7,6 +7,7 @@ import dto.NoticeDTO;
 import dto.ThesisDetailsDTO;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import model.*;
@@ -28,6 +29,7 @@ public class NoticeController {
 
     @FXML private DatePicker commissionDecisionDatePicker; // NoticeDate
     @FXML private DatePicker commissionMeetingDatePicker; // ApprovalDate (commission meeting)
+    @FXML private Label commissionDecisionDateLabel;
     @FXML private DatePicker defenseDatePicker; // DefenseDate
     @FXML private TextField defenseTimeField; // Vrijeme odbrane
     @FXML private TextField documentNumberField;
@@ -104,9 +106,14 @@ public class NoticeController {
             populateFields();
 
             // Load commission decision number from previous document
+            // Load commission decision number from previous document
             String commissionDecisionNumber = commissionReportDoc.getDocumentNumber();
             if (commissionDecisionNumber != null && !commissionDecisionNumber.isBlank()) {
                 commissionDecisionNumberText.setText(commissionDecisionNumber);
+
+                if (commissionDecisionDateLabel != null) {
+                    commissionDecisionDateLabel.setText("Datum obavijesti u zaglavlju:");
+                }
             }
 
             // Load existing document if exists
@@ -141,7 +148,11 @@ public class NoticeController {
             if (thesisDetails.getNoticeDate() != null) {
                 commissionDecisionDatePicker.setValue(thesisDetails.getNoticeDate());
             } else {
-                commissionDecisionDatePicker.setValue(LocalDate.now());
+                if (thesisDetails.getCommisionDate() != null) {
+                    commissionDecisionDatePicker.setValue(thesisDetails.getCommisionDate());
+                } else {
+                    commissionDecisionDatePicker.setValue(LocalDate.now()); // Fallback
+                }
             }
         }
 

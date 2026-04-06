@@ -58,7 +58,6 @@
 
                         <VBox spacing="3">
                             <Text styleClass="section-title" text="Podaci o kandidatu i radu" />
-                            <Text styleClass="page-subtitle" text="Preuzeto iz baze podataka" />
                         </VBox>
 
                         <GridPane hgap="30" vgap="20">
@@ -130,7 +129,7 @@
                         <VBox spacing="10">
                             <Text styleClass="section-title" text="Datum zapisnika" />
                             <VBox spacing="5">
-                                <Label styleClass="field-label" text="Datum zapisnika sa pismenog dijela (datum u headeru) *" />
+                                <Label styleClass="field-label" text="Datum zapisnika sa pismenog dijela (datum u zaglavlju) *" />
                                 <DatePicker fx:id="writtenReportDatePicker" promptText="Odaberite datum" styleClass="date-picker" />
                             </VBox>
                         </VBox>

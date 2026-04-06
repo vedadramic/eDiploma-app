@@ -28,7 +28,6 @@ public class EmailService {
 
     // ==================== HELPER METHODS ====================
 
-
     private String formatStaffName(AcademicStaff staff) {
         if (staff == null) return "N/A";
         
@@ -429,7 +428,7 @@ public class EmailService {
         String thesisTitle = thesisDetails.getTitle() != null ? thesisDetails.getTitle() : "N/A";
         String deadlineLine = "";
         if (thesisDetails.getApprovalDate() != null) {
-            java.time.LocalDate deadlineDate = thesisDetails.getApprovalDate().plusMonths(3);
+            java.time.LocalDate deadlineDate = thesisDetails.getFinalThesisApprovalDate().plusMonths(3);
             java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
             deadlineLine = "<p style=\"margin: 5px 0; color: #e74c3c;\"><strong>Krajnji rok za odbranu:</strong> "

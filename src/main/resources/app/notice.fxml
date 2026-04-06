@@ -113,7 +113,7 @@
                             </columnConstraints>
 
                             <!-- Datum rješenja komisije -->
-                            <Label text="Datum obavijesti (datum u headeru):" styleClass="field-label" GridPane.rowIndex="0"/>
+                            <Label fx:id="commissionDecisionDateLabel" text="Datum obavijesti:" styleClass="field-label" GridPane.rowIndex="0"/>
                             <DatePicker fx:id="commissionDecisionDatePicker"
                                         promptText="Odaberite datum"
                                         maxWidth="Infinity"
@@ -144,7 +144,7 @@
                                        styleClass="form-field"
                                        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-                            <Label text="Broj obavijesti (4 cifre):" styleClass="field-label" GridPane.rowIndex="4"/>
+                            <Label text="Broj rješenja:" styleClass="field-label" GridPane.rowIndex="4"/>
                             <HBox spacing="10" alignment="CENTER_LEFT"
                                   GridPane.columnIndex="1" GridPane.rowIndex="4">
                                 <TextField fx:id="documentNumberField"
