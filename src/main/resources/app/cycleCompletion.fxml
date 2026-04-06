@@ -55,8 +55,6 @@
 
                     <VBox spacing="5">
                         <Text styleClass="page-title" text="Uvjerenje o završenom ciklusu studija" />
-                        <Text styleClass="page-subtitle"
-                              text="Pregledajte podatke i unesite administrativne detalje prije kreiranja dokumenta." />
                     </VBox>
 
                     <VBox spacing="20" styleClass="form-section">
@@ -66,7 +64,6 @@
 
                         <VBox spacing="3">
                             <Text styleClass="section-title" text="Podaci o studentu" />
-                            <Text styleClass="page-subtitle" text="Preuzeto iz baze podataka" />
                         </VBox>
 
                         <GridPane hgap="30" vgap="20">
@@ -149,12 +146,12 @@
                         <VBox spacing="3">
                             <Text styleClass="section-title" text="Administrativni podaci" />
                             <Text styleClass="page-subtitle"
-                                  text="Unesite broj uvjerenja, datum izdavanja i ime studenta u genitivu" />
+                                  text="Unesite broj rješenja, datum izdavanja i ime studenta u genitivu" />
                         </VBox>
 
                         <GridPane hgap="20" vgap="15">
                             <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                                <Label styleClass="field-label" text="Broj uvjerenja (4 cifre) *" />
+                                <Label styleClass="field-label" text="Broj rješenja" />
                                 <HBox spacing="10" alignment="CENTER_LEFT">
                                     <TextField fx:id="documentNumberField"
                                                prefWidth="100"
@@ -164,7 +161,7 @@
                             </VBox>
 
                             <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                                <Label styleClass="field-label" text="Datum izdavanja uvjerenja (datum u headeru)*" />
+                                <Label styleClass="field-label" text="Datum izdavanja uvjerenja (datum u zaglavlju)*" />
                                 <DatePicker fx:id="cycleCompletionDatePicker"
                                             promptText="Odaberite datum"
                                             styleClass="form-field" />
@@ -173,9 +170,9 @@
                             <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">
                                 <Label styleClass="field-label" text="Ime studenta u GENITIVU *" />
                                 <Label style="-fx-font-size: 11px; -fx-text-fill: gray;"
-                                       text="Za tekst: 'na zahtjev Sušić Matea' (prezime pa ime)" />
+                                       text="Za tekst: 'na zahtjev Ramić Vedada' (prezime pa ime)" />
                                 <TextField fx:id="studentGenitiveField"
-                                           promptText="npr. Sušić Matea"
+                                           promptText="npr. Ramić Vedada"
                                            styleClass="form-field" />
                             </VBox>
 

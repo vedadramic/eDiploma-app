@@ -6,6 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import org.controlsfx.control.SearchableComboBox?>
+<?import javafx.scene.shape.SVGPath?>
 <AnchorPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controller.CommissionFormController"
@@ -113,7 +114,13 @@
 
                         <!-- INFO MESSAGE -->
                         <VBox spacing="10" style="-fx-background-color: #e3f2fd; -fx-background-radius: 8; -fx-padding: 15;">
-                            <Text text="ℹ️ Napomena" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+                            <HBox spacing="8" alignment="CENTER_LEFT">
+                                <SVGPath scaleX="0.75" scaleY="0.75" fill="#1976d2"
+                                         content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+
+                                <Text text="Napomena" style="-fx-font-weight: bold; -fx-font-size: 14; -fx-fill: #1976d2;"/>
+                            </HBox>
+
                             <Text text="Promjena mentora ili sekretara će ažurirati podatke za cijeli završni rad."
                                   style="-fx-font-size: 13; -fx-fill: #1976d2;" wrappingWidth="750"/>
                         </VBox>

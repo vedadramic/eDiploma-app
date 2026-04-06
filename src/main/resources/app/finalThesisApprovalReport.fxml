@@ -56,7 +56,6 @@
 
                     <VBox spacing="5">
                         <Text styleClass="page-title" text="Rješenje o izradi završnog rada" />
-                        <Text styleClass="page-subtitle" text="Provjerite podatke iz baze i unesite administrativne detalje." />
                     </VBox>
 
                     <GridPane hgap="40" vgap="20">
@@ -124,14 +123,14 @@
                             <Text styleClass="section-title" text="Administrativni podaci" />
 
                             <VBox spacing="5">
-                                <Label styleClass="field-label" text="Broj rješenja (cifre)" />
+                                <Label styleClass="field-label" text="Broj rješenja" />
                                 <TextField fx:id="decisionNumberField"
                                            promptText="npr. 2210"
                                            styleClass="form-field" />
                             </VBox>
 
                             <VBox spacing="5">
-                                <Label styleClass="field-label" text="Datum rješenja (datum u headeru) *" />
+                                <Label styleClass="field-label" text="Datum rješenja (datum u zaglavlju) *" />
                                 <DatePicker fx:id="decisionDatePicker" maxWidth="Infinity" styleClass="form-field" />
                             </VBox>
 
@@ -140,9 +139,9 @@
                             <VBox spacing="5">
                                 <Label styleClass="field-label" text="Ime studenta u GENITIVU *" />
                                 <Label style="-fx-font-size: 11px; -fx-text-fill: gray;"
-                                       text="Za rečenicu: '...na zahtjev [Drijenčić Amre]...'" />
+                                       text="Za rečenicu: '...na zahtjev [Hodžić Arnele]...'" />
                                 <TextField fx:id="studentGenitiveField"
-                                           promptText="npr. Drijenčić Amre"
+                                           promptText="npr. Hodžić Arnele"
                                            styleClass="form-field" />
                             </VBox>
 
